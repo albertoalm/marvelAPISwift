@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14460.32" systemVersion="18A391" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Autores" representedClassName="Autores" syncable="YES" codeGenerationType="class">
+        <attribute name="nombre" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="comics" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="Comics" inverseName="autores" inverseEntity="Comics" syncable="YES"/>
+    </entity>
+    <entity name="Comics" representedClassName="Comics" syncable="YES" codeGenerationType="class">
+        <attribute name="coverIMG" optional="YES" attributeType="Binary" syncable="YES"/>
+        <attribute name="coverURI" optional="YES" attributeType="URI" syncable="YES"/>
+        <attribute name="descripcion" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="id" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="precio" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="autores" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Autores" inverseName="comics" inverseEntity="Autores" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Autores" positionX="-45" positionY="0" width="128" height="75"/>
+        <element name="Comics" positionX="-9" positionY="45" width="128" height="150"/>
+    </elements>
+</model>
